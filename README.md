@@ -1,19 +1,7 @@
-
-# Android-Utility
-
-<p>This is a library for <strong>Android</strong> application projects.</p>
-
-
-<h1>How to use</h1>
-<div class="row">
-  <div class="col-lg-12">
-    <p>To get a Git project into your build:</p>
-  </div>
-</div>
-
+## Android-Utility
+*This is a library for <b>Android</b> application projects.*
+## *How to get a Git project into your build:*
 <b>Step 1.</b> Add the JitPack repository to your build file
-
-
 ```gradle
 	allprojects{
 		repositories{
@@ -22,15 +10,10 @@
 		}
 	}
 ```
-    
-<p><b>Step 2.</b> Add the dependency</p> 
-		
-
+<b>Step 2.</b> Add the dependency
 ```gradle
 	dependencies{
             implementation 'com.github.mostafamahmoudabdelaleem:Android-Utility:X.X.X'
 	}
 ```
-
-<p><b>Step 3.</b> Replace <strong>X.X.X</strong> with current version or any version you want.<p/>
-                        
+<b>Step 3.</b> Replace *<b>X.X.X</b>* with current version or any version you want.
