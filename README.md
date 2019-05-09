@@ -11,6 +11,14 @@
   </div>
 </div>
 
+```gradle
+	allprojects{
+		repositories{
+			...
+			maven { url : 'https://jitpack.io' }
+		}
+	}
+```
 
 <b>Step 1.</b> Add the JitPack repository to your build file
 
