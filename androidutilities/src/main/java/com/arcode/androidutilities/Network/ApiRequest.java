@@ -1,19 +1,16 @@
 package com.arcode.androidutilities.Network;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import static com.arcode.androidutilities.Network.NetworkUtils.readStream;
 
 public class ApiRequest {
 
-    public final String GET_METHOD = "GET";
-    public final String POST_METHOD = "POST";
     private String API_BASE_URL;
     private String REQUEST_METHOD;
     private HashMap<String, String> REQUEST_HEADERS;
@@ -58,29 +55,6 @@ public class ApiRequest {
             throw new Exception("Header Not Found.");
     }
 
-    private String readStream(InputStream in) {
-        BufferedReader reader = null;
-        StringBuilder response = new StringBuilder();
-        try {
-            reader = new BufferedReader(new InputStreamReader(in));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                response.append(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return response.toString();
-    }
-
     public void request() throws IOException {
         URL url = new URL(this.API_BASE_URL);
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -88,7 +62,7 @@ public class ApiRequest {
         for (Map.Entry header: this.REQUEST_HEADERS.entrySet())
             urlConnection.setRequestProperty(header.getKey().toString(), header.getValue().toString());
         InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-        this.API_RESPONSE = this.readStream(in);
+        this.API_RESPONSE = readStream(in);
         urlConnection.disconnect();
     }
 
