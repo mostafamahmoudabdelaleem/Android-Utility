@@ -2,7 +2,7 @@
 # Android-Utility
 
 <p>This is a library for <strong>Android</strong> application projects.</p>
-<p>Current version is <strong>v1.1.1</strong><p/>
+
 
 <h1 class="page-header" id="howto">How to use</h1>
 <div class="row">
@@ -35,4 +35,5 @@
 		<span class="token punctuation">}</span>
 	</code>
 </pre>
+<p><b>Step 3.</b> Replace <strong>X.X.X</strong> with current version or any version you want.<p/>
                         
