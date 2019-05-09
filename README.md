@@ -28,7 +28,7 @@
     
 <p><b>Step 2.</b> Add the dependency</p> 
 		
-<pre class="kode code-toolbar language-css">
+<pre class="kode code-toolbar language-css" style="background: #141414">
 	<code id="depCodeGradle" class=" kode  language-css">
 		<span class="token selector" style="color: #f9ee9a">dependencies</span><span class="token punctuation">{</span>
 	            implementation <span class="token string" style="color: #919e6b">'com.github.mostafamahmoudabdelaleem:Android-Utility:X.X.X'</span>
